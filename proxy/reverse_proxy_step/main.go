@@ -23,6 +23,7 @@ func main() {
 	if err1 != nil {
 		log.Println(err1)
 	}
+	
 	proxy := NewSingleHostReverseProxy(url1)
 	log.Println("Starting httpserver at " + addr)
 	log.Fatal(http.ListenAndServe(addr, proxy))
